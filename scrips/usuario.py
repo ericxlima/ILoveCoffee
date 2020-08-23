@@ -13,7 +13,7 @@ def usuario():
         senha = input('Qual a senha? ')
         dados = [(user_nick, senha), {'user_name': user_name, 'user_age': user_age,
                                       'user_timer': user_timer, 'user_score': 0}]
-        with open('txt/user_info.txt', 'r+') as file:
+        with open('../txt/user_info.txt', 'r+') as file:
             file.write(f'{dados}')
 
 

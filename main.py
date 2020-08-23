@@ -1,5 +1,5 @@
-from historia import historia
-from maquina_cafe import CoffeeMachine
+from scrips.historia import historia
+from scrips.maquina_cafe import CoffeeMachine
 
 
 '''         Esse é o ILoveCoffee - Projeto Final

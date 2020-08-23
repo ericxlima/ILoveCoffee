@@ -13,7 +13,7 @@ class CoffeeMachine:
     def iventario_maquina(self):
         """ Volta para o estado anterior da máquina (arquivo recursos_maquina.txt)"""
 
-        with open('txt/recursos_maquina.txt', 'r+') as file:
+        with open('../txt/recursos_maquina.txt', 'r+') as file:
             recursos = list(map(int, file.readlines()[0].split(',')))
         for index, value in enumerate(['água', 'leite', 'café', 'copos', 'money']):
             self.dict_values[value] = recursos[index]
@@ -50,7 +50,7 @@ class CoffeeMachine:
             for key in self.dict_values:
                 self.dict_values[key] -= custo[key]
             recursos_maquina = list(map(str, self.dict_values.values()))
-            with open('txt/recursos_maquina.txt', 'w+') as file:
+            with open('../txt/recursos_maquina.txt', 'w+') as file:
                 file.write(', '.join(recursos_maquina))
             print('Tenho recursos. Aproveite seu café :)')
         lista_falta.clear()
@@ -59,7 +59,7 @@ class CoffeeMachine:
         """ Lê o arquivo txt/iventario.txt e acescenta a Máquina de café os ingredientes
         Se o usuário não tiver ingredientes sufientes, ele não faz nada"""
 
-        with open('txt/iventario.txt', 'r+') as file:
+        with open('../txt/iventario.txt', 'r+') as file:
             lines = file.readlines()
             for index, line in enumerate(lines):
                 if self.user_name in line:
@@ -86,7 +86,7 @@ class CoffeeMachine:
             for index, value in enumerate(['água', 'leite', 'café', 'copos']):
                 self.dict_values[value] += user_qtdds[index]
                 recursos[index] = recursos[index] - user_qtdds[index]
-            with open('txt/iventario.txt', 'r+') as file:
+            with open('../txt/iventario.txt', 'r+') as file:
                 file.write(f"{self.user_name}, {', '.join(recursos)}")
 
     def user_buy(self):
@@ -98,13 +98,13 @@ class CoffeeMachine:
             print('Digite um dos números indicados...')
 
     def salvar(self):
-        with open('txt/user_info.txt', 'r+') as file:
+        with open('../txt/user_info.txt', 'r+') as file:
             lines = file.readlines()
             for index, line in enumerate(lines):
                 if self.user_name in line:
                     pop_line = lines.pop(index)
             new_score = f'{pop_line.split(", ")[0]}, {int(self.dados["copos_usados"])}'
-        with open('txt/user_info.txt', 'r+') as file:
+        with open('../txt/user_info.txt', 'r+') as file:
             file.write(new_score)
 
     def exe(self):
