@@ -1,0 +1,13 @@
+{"usuarios": [{
+             "nome": "Eric",
+             "senha": "Lima",
+             "pontos": 0,
+             "recursos":{"agua": 600,
+                         "leite": 300,
+                         "cafe": 100,
+                         "dinheiro": 0}
+             }],
+  "cartoes_credito": {
+      "numero_cartao": 12000,
+      "senha": 12000,
+      "grana": 10000 }}

@@ -24,12 +24,13 @@ class Jogo:
             if i == categoria:
                 palavra = choice(categorias[key])
         word_hifens = ['-' * len(palavra)]
+
         lifes = 8
         list_letters = []
         while lifes > 0:
             print('\n'+''.join(word_hifens))
             letter = input('Insira uma letra:')
-            # Possíveis erros
+            # Possíveis enganos
             if letter in list_letters:
                 print('Você já digitou esta letra')
             elif len(letter) != 1:
@@ -38,8 +39,8 @@ class Jogo:
                 print('Você deve inserir uma letra minúscula')
             else:
                 if letter not in palavra:
-                    print('Não existe esta letra na palavra')
                     lifes -= 1
+                    print('Não existe esta letra na palavra')
                     print(f'Vidas: {lifes}')
                 else:
                     position = [number for number in range(len(palavra)) if palavra[number] == letter]
