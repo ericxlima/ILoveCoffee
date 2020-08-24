@@ -1,3 +1,17 @@
+def criar_usuario(nome, senha):
+    novo_usuario = {
+        'usuarios': [
+            {'nome': nome,
+             'senha': senha,
+             'pontos': 0,
+             'recursos':{'agua': 600,
+                         'leite': 300,
+                         'cafe': 100,
+                         'dinheiro': 0}
+             }
+        ]
+    }
+
 def usuario():
     """ Checa se o usuário está ou não cadastrado no sistema, e o retorna"""
 
