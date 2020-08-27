@@ -1,17 +1,20 @@
-![Logo do IloveCoffee](media/logo.png?)
-##A Coleção de Projetos em Python mais organizada do Brasil
+<p align="center">
+  <img src="https://github.com/ericxlima/ILoveCoffee/blob/master/media/logo.png" />
+</p>
+
+<h2>A Coleção de Projetos em Python mais organizada do Brasil</h2>
 
 <!--ts-->
    * [Sobre](#Sobre)
    * [Instalação](#Instalação)
    * [Conteúdo](#Conteúdo)
-      * [Cadastro de Usuários](#Controle de Usuários)
+      * [Usuários](#Controle de Usuários)
       * [Minigames](#Minigames)
    * [Tecnologias](#🛠Tecnologias)
    * [Autor](#Autor)
 <!--te-->
 
-#Sobre
+<h1>Sobre</h1>
 ####O ILoveCoffee não é um jogo ou conjunto de mini-jogos qualquer, ele é toda uma experiência 
 ####Pensando especialmente em todos aqueles 79% de brasileiro apreciadores de café. Estás disposto a fazer diversos desafios em troca de café?
 
