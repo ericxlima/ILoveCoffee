@@ -15,23 +15,23 @@ class PedraPapelTesoura:
         print('Pressione a qualquer momento "sair" para sair ou "pontos" para exibir sua pontuação')
         lista = ["pedra", "papel", "tesoura"]
         perdedor = {"pedra": "papel", "tesoura": "pedra", "papel": "tesoura"}
-        user_choice = input().lower().strip()
+        user_choice = input('Você escolhe: ').lower().strip()
         while user_choice != 'sair':
             pc = choice(lista)
             if user_choice == 'pontos':
-                print(f'Sua pontuação atual é {self.pontos}')
+                print(f'Sua pontuação atual é {self.pontos}\n')
             elif user_choice not in lista:
-                print('Entrada Inválida')
+                print('Entrada Inválida\n')
             else:
                 if perdedor[user_choice] == pc:
-                    print(f'Que pena, a máquina escolheu {pc} e você perdeu 50 pontos :(')
+                    print(f'Que pena, a máquina escolheu {pc} e você perdeu 50 pontos :(\n')
                     self.pontos -= 50
                 elif user_choice == pc:
-                    print(f'A máquina escolheu {pc} e deu empate :| (niguém ganhou nada)')
+                    print(f'A máquina escolheu {pc} e deu empate :| (niguém ganhou nada)\n')
                 else:
-                    print('Parabéns! A máquina escolheu {pc} e você ganou 100 pontos :)')
+                    print('Parabéns! A máquina escolheu {pc} e você ganou 100 pontos :)\n')
                     self.pontos += 100
-            user_choice = input().lower().strip()
+            user_choice = input('Você escolhe: ').lower().strip()
 
     def salvar(self):
         """
