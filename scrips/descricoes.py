@@ -7,4 +7,9 @@ def historia():
     O seu objetivo é conseguir o máximo de cafeína tomado para conseguir ser o Rei do Café.\n
     Quantas xícaras de café és capaz de tomar?...\n '''
 
-    print(texto)
+    return texto
+
+
+def jogo_da_forca_historia():
+    texto = 'ok'
+    return texto

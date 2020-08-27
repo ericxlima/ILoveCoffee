@@ -1,11 +1,20 @@
-from scrips.historia import historia
+from scrips.descricoes import historia
 from scrips.maquina_cafe import CoffeeMachine
 from scrips.jogo_da_forca import Jogo
+from scrips.usuario import usuario
+
+print(historia())
+nick, senha = usuario()
 
 
-'''         Esse é o ILoveCoffee - Projeto Final
-            Uma ideia de unir o útil ao agradável, uma junção   '''
+def menu():
+    print('Seja bem vindo(a)\nO que deseja fazer?')
+    user = input('1- Jogar o Jogo da Forca\n2- Ir para a Máquina de café\n Sair - para sair do programa')
+    while user != 'sair':
+        if user == '1':
+            Jogo()
+        else:
+            CoffeeMachine()
+        user = user = input('1- Jogar o Jogo da Forca\n2- Ir para a Máquina de café\n Sair - para sair do programa')
 
-historia()
-play_game = CoffeeMachine()
-user = Jogo()
+menu()

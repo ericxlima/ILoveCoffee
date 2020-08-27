@@ -1,6 +1,6 @@
 {"usuarios": [{
              "nome": "Eric",
-             "senha": "Lima",
+             "senha": "1234",
              "pontos": 0,
              "recursos":{"agua": 600,
                          "leite": 300,
