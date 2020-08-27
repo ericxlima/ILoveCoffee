@@ -15,11 +15,13 @@ class Mercado:
     def comprar(self):
         def check(lst):
             prices = (10, 15, 25, 50, 100)
-            compras = [prices[i] * lst[i] for i in range(5)]
-            if sum(compras) <= self.dict_values['pontos']:
-                self.dict_values['pontos'] -= sum(compras)
-                return True
-
+            try:
+                compras = [prices[i] * lst[i] for i in range(5)]
+                if sum(compras) <= self.dict_values['pontos']:
+                    self.dict_values['pontos'] -= sum(compras)
+                    return True
+            except IndexError:
+                print('Não foi possível realizar as compras :(')
         precos = '''Preços tabelados:
             1 Dinheiro -> 10  pontos
             1 ml Água  -> 15  pontos
@@ -28,11 +30,14 @@ class Mercado:
             1 copo     -> 100 pontos'''
         print(precos)
         new_values = []
-        for item in self.dict_values.keys()[:-1]:
-            new_values.append(int(input(f"Quantos unidades de {item} queres comprar? ")))
+        for item in ['dinheiro', 'agua', 'leite', 'cafe', 'copos']:  # erro
+            try:
+                new_values.append(int(input(f"Quantos unidades de {item} queres comprar? ")))
+            except ValueError:
+                print('Entrada Inválida')
         resultado = check(new_values)
         if resultado:
-            for idx, key in enumerate(self.dict_values.keys()[:-1]):
+            for idx, key in enumerate(['dinheiro', 'agua', 'leite', 'cafe', 'copos']):
                 self.dict_values[key] += new_values[idx]
 
     def exe(self):

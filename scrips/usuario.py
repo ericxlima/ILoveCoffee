@@ -1,12 +1,12 @@
 def usuario():
     """ Checa se o usuário está ou não cadastrado no sistema, e o retorna"""
 
-    cadastrado = input('Você já está cadastrado no sistema?[S/N]')
+    cadastrado = input('Você já está cadastrado no sistema?[S/N]').upper()
     if cadastrado == 'S':
         user_nick = input('Insira seu Nickname: ')
         user_senha = input('Insira sua senha: ')
     else:
-        user_nick = input('Insira um NickName (): ')
+        user_nick = input('Insira um NickName: ')
         user_senha = input('Qual a senha? ')
         criar_usuario(user_nick, user_senha)
     return user_nick, user_senha

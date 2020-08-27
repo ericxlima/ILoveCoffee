@@ -23,7 +23,7 @@ class Jogo:
 
     def jogar(self, categoria):
         palavra = choice(self.categorias[categoria])
-        word_hifens = ['-' * len(palavra)]
+        word_hifens = ['-' for _ in palavra]
 
         lifes = 8
         list_letters = []

@@ -123,6 +123,3 @@ class CoffeeMachine:
                 self.salvar()
             user = input('\nEscolha uma ação: \n1- Comprar\n2- Reabastecer\n3- Recursos'
                          '\n4- Salvar\n5- Sair\n').strip().lower()
-
-
-playgame = CoffeeMachine('EVL')

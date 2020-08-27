@@ -10,13 +10,14 @@ class PedraPapelTesoura:
         self.jogar()
 
     def jogar(self):
+        print('\n Bem vindo ao Jogo Pedra Papel e Tesoura\n')
         print('Instruções: Ao jogar escolha uma entre as opções [pedra, papel, tesoura]')
         print('Pressione a qualquer momento "sair" para sair ou "pontos" para exibir sua pontuação')
         lista = ["pedra", "papel", "tesoura"]
         perdedor = {"pedra": "papel", "tesoura": "pedra", "papel": "tesoura"}
         user_choice = input().lower().strip()
-        pc = choice(lista)
         while user_choice != 'sair':
+            pc = choice(lista)
             if user_choice == 'pontos':
                 print(f'Sua pontuação atual é {self.pontos}')
             elif user_choice not in lista:
@@ -30,7 +31,7 @@ class PedraPapelTesoura:
                 else:
                     print('Parabéns! A máquina escolheu {pc} e você ganou 100 pontos :)')
                     self.pontos += 100
-                user_choice = input().lower().strip()
+            user_choice = input().lower().strip()
 
     def salvar(self):
         """

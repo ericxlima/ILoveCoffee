@@ -27,7 +27,7 @@ class JogoDaVelha:
         p6 = m[1][1] if m[0][1] == m[1][1] == m[2][1] else False
         p7 = m[0][0] if m[0][0] == m[1][1] == m[2][2] else False
         p8 = m[0][2] if m[0][2] == m[1][1] == m[2][0] else False
-        ganhou = [x for x in [p1, p2, p3, p4, p5, p6, p7, p8] if x]
+        ganhou = [x for x in [p1, p2, p3, p4, p5, p6, p7, p8] if x == 'X' or x == 'O']
         if ganhou:
             return f"{ganhou[0]} Ganhou!"
         else:
