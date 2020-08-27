@@ -48,7 +48,7 @@ class Jogo:
                         word_hifens[x] = letter
                     if '-' not in word_hifens:
                         print(f'\nParabéns {self.nick}\nVocê adivinhou a palavra {palavra}\nVocê Sobreviveu XD !')
-                        self.pontuacao += 200
+                        self.pontuacao += 100 * lifes
                         lifes = 0
                 list_letters.append(letter)
         else:

@@ -3,10 +3,10 @@ def usuario():
 
     cadastrado = input('Você já está cadastrado no sistema?[S/N]')
     if cadastrado == 'S':
-        user_nick = input('Qual o seu Nickname? ')
-        user_senha = input('Qual a sua senha? ')
+        user_nick = input('Insira seu Nickname: ')
+        user_senha = input('Insira sua senha: ')
     else:
-        user_nick = input('Qual o seu nick para o Jogo? ')
+        user_nick = input('Insira um NickName (): ')
         user_senha = input('Qual a senha? ')
         criar_usuario(user_nick, user_senha)
     return user_nick, user_senha
@@ -28,3 +28,4 @@ def criar_usuario(nome, senha):
     '''
         Falta aprender a trabalhar com arquivos json para abrir o arquivo etc.usuarios.json e add este usuário
     '''
+    return
