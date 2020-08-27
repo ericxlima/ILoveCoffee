@@ -1,7 +1,6 @@
 def usuario():
     """ Checa se o usuário está ou não cadastrado no sistema, e o retorna"""
 
-    user_nick, user_senha = None, None
     cadastrado = input('Você já está cadastrado no sistema?[S/N]')
     if cadastrado == 'S':
         user_nick = input('Qual o seu Nickname? ')
@@ -10,7 +9,7 @@ def usuario():
         user_nick = input('Qual o seu nick para o Jogo? ')
         user_senha = input('Qual a senha? ')
         criar_usuario(user_nick, user_senha)
-    return tuple(user_nick, user_senha)
+    return user_nick, user_senha
 
 
 def criar_usuario(nome, senha):
@@ -29,4 +28,3 @@ def criar_usuario(nome, senha):
     '''
         Falta aprender a trabalhar com arquivos json para abrir o arquivo etc.usuarios.json e add este usuário
     '''
-

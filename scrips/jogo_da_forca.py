@@ -1,34 +1,34 @@
 from random import choice
 
-categorias = {'animais': ['coelho', 'cavalo', 'coruja', 'gaivota', 'porco', 'galinha',
-                          'macaco', 'baleia', 'golfinho', 'morcego', 'girafa', 'elefante',
-                          'castor', 'calango', 'flamingo', 'guepardo', 'hamster', 'serpente'],
-              'alimentos': ['pepino', 'graviola', 'espaguete', 'manteiga', 'feijoada', 'lasanha',
-                            'palmito', 'ervilha', 'repolho', 'pamonha', 'caramelo', 'chiclete',
-                            'gengibre', 'gelatina', 'lentilha', 'pimenta', 'sorvete'],
-              'geral': ['paraquedas', 'lombada', 'ventilador', 'caminhonete', 'violino', 'despertador',
-                        'camisola', 'banheira', 'choveiro', 'mochila', 'computador', 'fotografia',
-                        'brinquedo', 'revolver', 'esquadro', 'monitor', 'pincel', 'vasilhame']
-              }
-
 
 class Jogo:
 
-    def __init__(self):
-        print('Seja Bem Vindo(a) ao Jogo da Forca')
+    def __init__(self, nick, senha):
+
+        self.categorias = {'animais': ['coelho', 'cavalo', 'coruja', 'gaivota', 'porco', 'galinha',
+                                       'macaco', 'baleia', 'golfinho', 'morcego', 'girafa', 'elefante',
+                                       'castor', 'calango', 'flamingo', 'guepardo', 'hamster', 'serpente'],
+                           'alimentos': ['pepino', 'graviola', 'espaguete', 'manteiga', 'feijoada', 'lasanha',
+                                         'palmito', 'ervilha', 'repolho', 'pamonha', 'caramelo', 'chiclete',
+                                         'gengibre', 'gelatina', 'lentilha', 'pimenta', 'sorvete'],
+                           'geral': ['paraquedas', 'lombada', 'ventilador', 'caminhonete', 'violino', 'despertador',
+                                     'camisola', 'banheira', 'choveiro', 'mochila', 'computador', 'fotografia',
+                                     'brinquedo', 'revolver', 'esquadro', 'monitor', 'pincel', 'vasilhame']
+                           }
+        self.nick = nick
+        self.senha = senha
+        self.pontuacao = 0
+        print(f'Seja Bem Vindo(a) {self.nick} ao Jogo da Forca')
         self.exe()
 
     def jogar(self, categoria):
-        palavra = None
-        for i, key in enumerate(categorias.keys()):
-            if i == categoria:
-                palavra = choice(categorias[key])
+        palavra = choice(self.categorias[categoria])
         word_hifens = ['-' * len(palavra)]
 
         lifes = 8
         list_letters = []
         while lifes > 0:
-            print('\n'+''.join(word_hifens))
+            print('\n' + ''.join(word_hifens))
             letter = input('Insira uma letra:')
             # Possíveis enganos
             if letter in list_letters:
@@ -47,20 +47,26 @@ class Jogo:
                     for x in position:
                         word_hifens[x] = letter
                     if '-' not in word_hifens:
-                        print('\n{}\nVocê adivinhou a palavra\nVocê Sobreviveu XD !'.format(palavra))
+                        print(f'\nParabéns {self.nick}\nVocê adivinhou a palavra {palavra}\nVocê Sobreviveu XD !')
+                        self.pontuacao += 200
                         lifes = 0
                 list_letters.append(letter)
         else:
             print(f'A palavra era {palavra}')
-            print('Você foi enforcado!')
+            print('Você foi enforcado! :(')
+
+    def salvar(self):
+        """ Salva as informações do usuário (aprender o módulo json)"""
+        pass
 
     def exe(self):
         user_choice = input('\nEscolha "jogar" ou "sair":')
-        while user_choice == 'jogar':
-            categoria = int(
-                input('Que categoria você vai querer jogar?\n"1"- Animais\n"2" - Alimentos\n"3" - Geral\n'))
-            self.jogar(categoria)
+        while user_choice != 'sair':
+            cat = input('Escolha uma categoria:\n- Animais\n- Alimentos\n- Geral\n').lower()
+            if cat in self.categorias.keys():
+                self.jogar(cat)
+            else:
+                print('Categoria não encontrada :(')
             user_choice = input('\nEscolha "jogar" ou "sair":')
-
-
-eric = Jogo()
+        else:
+            self.salvar()

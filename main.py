@@ -12,9 +12,10 @@ def menu():
     user = input('1- Jogar o Jogo da Forca\n2- Ir para a Máquina de café\n Sair - para sair do programa')
     while user != 'sair':
         if user == '1':
-            Jogo()
+            Jogo(nick, senha)
         else:
-            CoffeeMachine()
-        user = user = input('1- Jogar o Jogo da Forca\n2- Ir para a Máquina de café\n Sair - para sair do programa')
+            CoffeeMachine(nick, senha)
+        user = input('1- Jogar o Jogo da Forca\n2- Ir para a Máquina de café\n Sair - para sair do programa')
+
 
 menu()

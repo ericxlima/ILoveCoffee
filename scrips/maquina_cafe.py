@@ -1,10 +1,11 @@
 class CoffeeMachine:
 
-    def __init__(self, user_name):
+    def __init__(self, nick, senha):
         """ Dados relativos a Máquina e ao Score do Usuário """
 
-        self.user_name = user_name
-        print('Seja Bem Vindo(a) a Máquina de Café')
+        self.nick = nick
+        self.senha = senha
+        print(f'Seja Bem Vindo(a) {self.nick} a Máquina de Café')
         self.dict_values = {}
         self.iventario_maquina()
         self.dados = {'ml_bebido': 0, 'money_gasto': 0, 'copos_usados': 0, 'tipos': []}
@@ -62,7 +63,7 @@ class CoffeeMachine:
         with open('../etc/iventario.etc', 'r+') as file:
             lines = file.readlines()
             for index, line in enumerate(lines):
-                if self.user_name in line:
+                if self.nick in line:
                     pop_line = lines.pop(index)
         recursos = list(map(int, pop_line.split(', ')[1:]))
 
@@ -87,7 +88,7 @@ class CoffeeMachine:
                 self.dict_values[value] += user_qtdds[index]
                 recursos[index] = recursos[index] - user_qtdds[index]
             with open('../etc/iventario.etc', 'r+') as file:
-                file.write(f"{self.user_name}, {', '.join(recursos)}")
+                file.write(f"{self.nick}, {', '.join(recursos)}")
 
     def user_buy(self):
         user = input(
@@ -101,7 +102,7 @@ class CoffeeMachine:
         with open('../etc/user_info.etc', 'r+') as file:
             lines = file.readlines()
             for index, line in enumerate(lines):
-                if self.user_name in line:
+                if self.nick in line:
                     pop_line = lines.pop(index)
             new_score = f'{pop_line.split(", ")[0]}, {int(self.dados["copos_usados"])}'
         with open('../etc/user_info.etc', 'r+') as file:
