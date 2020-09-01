@@ -1,22 +1,28 @@
 import json
 
 
-def geral():
+def usuario():
     """ Checa se o usuário está ou não cadastrado no sistema, e o retorna"""
 
-    cadastrado = input('Você já está cadastrado no sistema?[S/N]').upper()
-    if cadastrado == 'S':
-        user_nick = input('Insira seu Nickname: ')
-        user_senha = input('Insira sua senha: ')
-        if check(user_nick, user_senha):
-            return user_nick, user_senha
-        print('Usuário e/ou senha incorreto')
-        return False
-    else:
-        user_nick = input('Insira um NickName (não poderá ser alterado): ')
-        user_senha = input('Insira sua senha (não pdoerá ser alterada): ')
-        criar_usuario(user_nick, user_senha)
-        return user_nick, user_senha
+    nick, senha = None, None
+    while (nick, senha) == (None, None):
+        cadastrado = input('\nVocê já está cadastrado no sistema?[S/N]').upper()
+        if cadastrado == 'S':
+            user_nick = input('Insira seu Nickname: ')
+            user_senha = input('Insira sua senha: ')
+            if check(user_nick, user_senha):
+                nick, senha = user_nick, user_senha
+            else:
+                print('Usuário e/ou senha incorreto')
+        else:
+            user_nick = input('Insira um NickName (não poderá ser alterado): ')
+            user_senha = input('Insira sua senha (não pdoerá ser alterada): ')
+            if check(user_nick):
+                criar_usuario(user_nick, user_senha)
+                nick, senha = user_nick, user_senha
+            else:
+                print('Nickname já cadastrado, escolha outro')
+    return nick, senha
 
 
 def criar_usuario(nome, senha):
@@ -28,25 +34,25 @@ def criar_usuario(nome, senha):
                                  'cafe': 100,
                                  'copos': 9,
                                  'dinheiro': 0}}
-    file = open("../etc/usuarios.json", 'r+')
-    usuarios_json = json.load(file)
+    with open("etc/usuarios.json", 'r') as file:
+        usuarios_json = json.load(file)
     usuarios_json['usuarios'].append(novo_usuario)
     usuarios_json = json.dumps(usuarios_json, indent=4)
-    file.write(usuarios_json)
-    file.close()
+    with open("etc/usuarios.json", 'w') as file:
+        file.write(usuarios_json)
 
 
-def check(nome, senha):
-    """Checa se o nome e a senha foram inseridos de forma correta"""
+def check(nome, senha=None):
+    """Retorna True se o nome/senha estiver correta"""
 
-    with open("../etc/usuarios.json", 'r+') as file:
+    with open("etc/usuarios.json", 'r+') as file:
         lines = json.load(file)
-    for pessoa in lines['usuarios']:
-        if pessoa['nome'] == nome and pessoa['senha'] == senha:
+    if nome and senha:
+        for pessoa in lines['usuarios']:
+            if (pessoa['nome'], pessoa['senha']) == (nome, senha):
+                return True
+        return False
+    elif nome:
+        if nome not in [pessoa['nome'] for pessoa in lines['usuarios']]:
             return True
-    return False
-
-
-def usuario():
-    while not geral():
-        geral()
+        return False
