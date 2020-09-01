@@ -2,7 +2,9 @@
   <img src="https://github.com/ericxlima/ILoveCoffee/blob/master/media/logo.png" />
 </p>
 
-<h2 align="center">A Coleção de Projetos em Python mais organizada do Brasil</h2>
+<h3 align="center">
+    A Coleção de Projetos em Python mais divertida do Brasil 🚀
+</h3>
 
 <!--ts-->
    * [Sobre](#Sobre)
@@ -15,11 +17,12 @@
 <!--te-->
 
 <h1>Sobre</h1>
-<h4>O ILoveCoffee não é um jogo ou conjunto de mini-jogos qualquer, ele é toda uma experiência 
-Pensando especialmente em todos aqueles 79% de brasileiro apreciadores de café. Estás disposto a fazer diversos desafios em troca de café?</h4>h4>
+O ILoveCoffee não é um jogo ou conjunto de mini-jogos qualquer, ele é toda uma experiência 
+Pensando especialmente em todos aqueles 79% de brasileiro apreciadores de café. Estás disposto a fazer diversos desafios em troca de café?
 
 <h1>Instalação</h1>
-<h4>Com o <a href=“https://git-scm.com/“>Git</a> devidamente instalado na sua máquina faça os seguintes comandos:</h4>
+
+Com o [Git](https://git-scm.com) devidamente instalado na sua máquina faça os seguintes comandos:
 
 ```bash
 # Clone este repositório
@@ -36,42 +39,47 @@ $ main.py python
 ```
 
 <h1>Conteúdo</h1>
-<h2>Usuários</h2>
-<h4>No projeto final, poderemos cadastrar diversos usuários, com um controle organizacional
+<h3>Usuários</h3>
+
+No projeto final, poderemos cadastrar diversos usuários, com um controle organizacional
 Diversas informações sobre os usuários também serão armazenadas, para que nenhum dado importante seja perdido     
-O usuário poderá fazer muitas coisas como:</h4>
-- [x] Manusear cartão de crédito (fictício mas com algorítmo Luhn)
+O usuário poderá fazer muitas coisas como:
+- [x] Manusear cartão de crédito (fictício mas com Algorítmo Luhn)
 - [x] Comprar diversos itens e diversos tipos de Café ☕ 
 - [x] Chegar ao topo do Ranking do Rei do Café
 
-<h2>Minigames</h2>
-<h4>Diversos minigames estão sendo desenvolvidos para fazer deste projeto um dos mais divertidos 😃 
-Dentre eles podemos citar:</h4>
+<h3>Minigames</h3>
+
+Diversos minigames estão sendo desenvolvidos para fazer deste projeto um dos mais divertidos 😃 
+Dentre eles podemos citar:
 - [x] Jogo da Velha (multiplayer)
 - [x] Pedra Papel e Tesoura
 - [x] Jogo da forca
 
-<h4 align="center"> 
+<h2 align="center"> 
 	🚧  ILoveCoffee Status  🚀 Em construção...  🚧
-</h4>
+</h2>
 
-<h3>Features</h3>
+<h3>Andamento para versão Alpha</h3>
+
 - [ ] Cadastro de usuário
 - [ ] Ranking Rei do Café
 - [ ] Manipulação de arquivos
 
 <h3>Pré-requisitos</h3>
 
-<h4>Antes de começar, você vai precisar ter instalado em sua máquina o <a href=“https://www.python.org/“>Python</a>.  
-Além disto é bom ter um editor para trabalhar com o código como <a href=“https://code.visualstudio.com/“>VSCode</a> ou o <a href=“https://www.jetbrains.com/pt-br/pycharm/“>PuCharm</a> </h4>
+Antes de começar, você vai precisar ter instalado em sua máquina o [Python](https://www.python.org).  
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com) 
+ou o [PyCharm](https://www.jetbrains.com/pt-br/pycharm)
 
 <h3>🛠Tecnologias</h3>
-<h4>As seguintes ferramentas foram usadas na construção do projeto: <a href=“https://www.python.org/“>Python</a>, <a href=“https://www.json.org/json-pt.html“>Json</a></h4>
+
+As seguintes ferramentas foram usadas na construção do projeto: [Python](https://www.python.org), [Json](https://www.json.org/json-pt.html).
 
 <h3>Autor</h3>
  <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/58092119?s=460&u=5b62affe756c63fb0458026088d779d88159655d&v=4" width="100px;" alt=""/>
  <br />
- <sub><b>Eric de Lima</b></sub>
+ <sub href=“https://github.com/ericxlima/“><b>Eric de Lima</b></sub>
 
 👋🏽 Entre em contato!
 
