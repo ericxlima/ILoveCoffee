@@ -42,6 +42,9 @@ class Jogo:
                     lifes -= 1
                     print('Não existe esta letra na palavra')
                     print(f'Vidas: {lifes}')
+                    if lifes == 0:
+                        print(f'A palavra era {palavra}')
+                        print('Você foi enforcado! :(')
                 else:
                     position = [number for number in range(len(palavra)) if palavra[number] == letter]
                     for x in position:
@@ -51,9 +54,6 @@ class Jogo:
                         self.pontuacao += 100 * lifes
                         lifes = 0
                 list_letters.append(letter)
-        else:
-            print(f'A palavra era {palavra}')
-            print('Você foi enforcado! :(')
 
     def salvar(self):
         """ Salva as informações do usuário (aprender o módulo json)"""
