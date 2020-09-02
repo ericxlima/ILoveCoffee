@@ -1,10 +1,9 @@
 class CoffeeMachine:
 
-    def __init__(self, nick, senha):
+    def __init__(self, nick):
         """ Dados relativos a Máquina e ao Score do Usuário """
 
         self.nick = nick
-        self.senha = senha
         print(f'Seja Bem Vindo(a) {self.nick} a Máquina de Café')
         self.dict_values = {}
         self.iventario_maquina()

@@ -1,44 +1,56 @@
+import json
+
+
 class Mercado:
-    def __init__(self, nick, senha):
+    def __init__(self, nick):
         self.nick = nick
-        self.senha = senha
-        self.dict_values = {'agua': 0, 'leite': 0, 'cafe': 0, 'copos': 0, 'dinheiro': 0, 'pontos': 0}
+        self.geral, self.line, self.user_values = None, None, None
+        self.user = None
         self.load_info()
         self.exe()
 
     def load_info(self):
-        """
-        aprender a manipular arquivos json para logar as informações do usuário
-        """
-        pass
+        with open('etc/usuarios.json', 'r') as file:
+            self.geral = json.load(file)
+            for idx, pessoa in enumerate(self.geral['usuarios']):
+                if pessoa['nome'] == self.nick:
+                    self.line, self.user_values = (idx, self.geral['usuarios'][idx]['recursos'])
+                    self.user = self.geral['usuarios'][idx]
 
     def comprar(self):
         def check(lst):
-            prices = (10, 15, 25, 50, 100)
+            prices = (15, 25, 50, 100)
             try:
-                compras = [prices[i] * lst[i] for i in range(5)]
-                if sum(compras) <= self.dict_values['pontos']:
-                    self.dict_values['pontos'] -= sum(compras)
+                compras = [prices[i] * lst[i] for i in range(4)]
+                if sum(compras) <= self.user_values['dinheiro']:
+                    self.user_values['dinheiro'] -= sum(compras)
                     return True
             except IndexError:
                 print('Não foi possível realizar as compras :(')
+
         precos = '''Preços tabelados:
-            1 Dinheiro -> 10  pontos
             1 ml Água  -> 15  pontos
             1 ml Leite -> 25  pontos
             1 g Café   -> 50  pontos
             1 copo     -> 100 pontos'''
         print(precos)
         new_values = []
-        for item in ['dinheiro', 'agua', 'leite', 'cafe', 'copos']:  # erro
+        for item in ['agua', 'leite', 'cafe', 'copos']:  # erro
             try:
                 new_values.append(int(input(f"Quantos unidades de {item} queres comprar? ")))
             except ValueError:
                 print('Entrada Inválida')
-        resultado = check(new_values)
-        if resultado:
-            for idx, key in enumerate(['dinheiro', 'agua', 'leite', 'cafe', 'copos']):
-                self.dict_values[key] += new_values[idx]
+        if check(new_values):
+            for idx, key in enumerate(['agua', 'leite', 'cafe', 'copos']):
+                self.user_values[key] += new_values[idx]
+
+    def salvar(self):
+        geral = self.geral
+        with open('etc/usuarios.json', 'w') as file:
+            self.user['recursos'] = self.user_values
+            geral['usuarios'][self.line] = self.user
+            geral = json.dumps(self.geral, indent=4)
+            file.write(geral)
 
     def exe(self):
         print('Bem vindo ao Mercado, aqui você pode trocar pontos por dinheiro e/ou ingredientes')
@@ -46,3 +58,4 @@ class Mercado:
         while fzr != 'sair':
             self.comprar()
             fzr = input('O que deseja fazer? [comprar/sair]')
+        self.salvar()

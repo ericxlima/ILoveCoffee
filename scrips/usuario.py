@@ -22,7 +22,7 @@ def usuario():
                 nick, senha = user_nick, user_senha
             else:
                 print('Nickname já cadastrado, escolha outro')
-    return nick, senha
+    return nick
 
 
 def criar_usuario(nome, senha):

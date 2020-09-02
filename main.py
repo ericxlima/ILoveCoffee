@@ -14,17 +14,17 @@ def menu_principal(log):
                  '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n Sair - para sair do programa\n')
     while user != 'sair':
         if user == '1':
-            Jogo(*log)
+            Jogo(log)
         elif user == '2':
-            CoffeeMachine(*log)
+            CoffeeMachine(log)
         elif user == '3':
-            Mercado(*log)
+            Mercado(log)
         elif user == '4':
             menu()
         elif user == '5':
-            PedraPapelTesoura(*log)
+            PedraPapelTesoura(log)
         elif user == '6':
-            JogoDaVelha(*log)
+            JogoDaVelha(log)
         print('\nSeja bem vindo(a) ao Menu Principal\n\nO que deseja fazer?')
         user = input('1- Jogo da Forca\n2- Máquina de café\n3- Mercado\n4- Instruções\n5- Pedra, Papel e Tesoura\n'
                      '6- Jogo da Velha\n Sair - para sair do programa\n')

@@ -1,9 +1,10 @@
 from random import choice
+import json
 
 
 class Jogo:
 
-    def __init__(self, nick, senha):
+    def __init__(self, nick):
 
         self.categorias = {'animais': ['coelho', 'cavalo', 'coruja', 'gaivota', 'porco', 'galinha',
                                        'macaco', 'baleia', 'golfinho', 'morcego', 'girafa', 'elefante',
@@ -16,7 +17,6 @@ class Jogo:
                                      'brinquedo', 'revolver', 'esquadro', 'monitor', 'pincel', 'vasilhame']
                            }
         self.nick = nick
-        self.senha = senha
         self.pontuacao = 0
         print(f'Seja Bem Vindo(a) {self.nick} ao Jogo da Forca')
         self.exe()
@@ -56,8 +56,16 @@ class Jogo:
                 list_letters.append(letter)
 
     def salvar(self):
-        """ Salva as informações do usuário (aprender o módulo json)"""
-        pass
+        with open('etc/usuarios.json', 'r') as file:
+            geral = json.load(file)
+            for idx, pessoa in enumerate(geral['usuarios']):
+                if pessoa['nome'] == self.nick:
+                    line, user = (idx, geral['usuarios'][idx])
+                    user['pontos'] += self.pontuacao
+                    geral['usuarios'][idx] = user
+        with open('etc/usuarios.json', 'w') as file2:
+            geral = json.dumps(geral, indent=4)
+            file2.write(geral)
 
     def exe(self):
         user_choice = input('\nEscolha "jogar" ou "sair":')

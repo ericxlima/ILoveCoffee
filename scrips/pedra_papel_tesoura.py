@@ -1,13 +1,14 @@
 from random import choice
+import json
 
 
 class PedraPapelTesoura:
 
-    def __init__(self, nick, senha):
+    def __init__(self, nick):
         self.user = nick
-        self.senha = senha
         self.pontos = 0
         self.jogar()
+        self.salvar()
 
     def jogar(self):
         print('\n Bem vindo ao Jogo Pedra Papel e Tesoura\n')
@@ -24,17 +25,23 @@ class PedraPapelTesoura:
                 print('Entrada Inválida\n')
             else:
                 if perdedor[user_choice] == pc:
-                    print(f'Que pena, a máquina escolheu {pc} e você perdeu 50 pontos :(\n')
+                    print(f'Que pena, a máquina escolheu "{pc}" e você perdeu 50 pontos :(\n')
                     self.pontos -= 50
                 elif user_choice == pc:
-                    print(f'A máquina escolheu {pc} e deu empate :| (niguém ganhou nada)\n')
+                    print(f'A máquina escolheu "{pc}" e deu empate :| (niguém ganhou nada)\n')
                 else:
-                    print('Parabéns! A máquina escolheu {pc} e você ganou 100 pontos :)\n')
+                    print(f'Parabéns! A máquina escolheu "{pc}" e você ganhou 100 pontos :)\n')
                     self.pontos += 100
             user_choice = input('Você escolhe: ').lower().strip()
 
     def salvar(self):
-        """
-        Devo aprender a manipular arquvos json pra salvar os dados :(
-        """
-        return
+        with open('etc/usuarios.json', 'r') as file:
+            geral = json.load(file)
+            for idx, pessoa in enumerate(geral['usuarios']):
+                if pessoa['nome'] == self.user:
+                    line, user = (idx, geral['usuarios'][idx])
+                    user['pontos'] += self.pontos
+                    geral['usuarios'][idx] = user
+        with open('etc/usuarios.json', 'w') as file2:
+            geral = json.dumps(geral, indent=4)
+            file2.write(geral)

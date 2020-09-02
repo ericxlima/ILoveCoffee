@@ -3,31 +3,19 @@
         {
             "nome": "Eric",
             "senha": "1234",
-            "pontos": 0,
+            "pontos": 10000,
             "recursos": {
                 "agua": 1600,
                 "leite": 1300,
                 "cafe": 1100,
                 "copos": 19,
-                "dinheiro": 0
+                "dinheiro": 6000
             }
         },
         {
-            "nome": "vitoria",
-            "senha": "12345",
-            "pontos": 0,
-            "recursos": {
-                "agua": 600,
-                "leite": 300,
-                "cafe": 100,
-                "copos": 9,
-                "dinheiro": 0
-            }
-        },
-        {
-            "nome": "1222",
-            "senha": "2222",
-            "pontos": 0,
+            "nome": "joana",
+            "senha": "1234",
+            "pontos": 150,
             "recursos": {
                 "agua": 600,
                 "leite": 300,

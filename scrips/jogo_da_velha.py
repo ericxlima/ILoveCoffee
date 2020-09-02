@@ -1,8 +1,7 @@
 class JogoDaVelha:
 
-    def __init__(self, nick, senha):
+    def __init__(self, nick):
         self.nick = nick
-        self.senha = senha
         self.tentativas = 0
 
         self.matriz = [[' ' for _ in range(3)] for _ in range(3)]
