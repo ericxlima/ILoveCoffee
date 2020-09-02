@@ -3,25 +3,13 @@
         {
             "nome": "Eric",
             "senha": "1234",
-            "pontos": 10000,
+            "pontos": 1500,
             "recursos": {
                 "agua": 1600,
                 "leite": 1300,
                 "cafe": 1100,
                 "copos": 19,
-                "dinheiro": 6000
-            }
-        },
-        {
-            "nome": "joana",
-            "senha": "1234",
-            "pontos": 150,
-            "recursos": {
-                "agua": 600,
-                "leite": 300,
-                "cafe": 100,
-                "copos": 9,
-                "dinheiro": 0
+                "dinheiro": 1700
             }
         }
     ]

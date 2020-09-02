@@ -24,9 +24,10 @@ class Mercado:
                 compras = [prices[i] * lst[i] for i in range(4)]
                 if sum(compras) <= self.user_values['dinheiro']:
                     self.user_values['dinheiro'] -= sum(compras)
+                    print('Compra realizada com sucesso\n')
                     return True
             except IndexError:
-                print('Não foi possível realizar as compras :(')
+                print('Não foi possível realizar as compras :(\n')
 
         precos = '''Preços tabelados:
             1 ml Água  -> 15  pontos
@@ -53,7 +54,7 @@ class Mercado:
             file.write(geral)
 
     def exe(self):
-        print('Bem vindo ao Mercado, aqui você pode trocar pontos por dinheiro e/ou ingredientes')
+        print('\nBem vindo ao Mercado, aqui você pode trocar pontos por dinheiro e/ou ingredientes')
         fzr = input('O que deseja fazer? [comprar/sair]')
         while fzr != 'sair':
             self.comprar()

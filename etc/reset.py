@@ -2,6 +2,7 @@ from json import dumps
 
 
 def resetar():
+    """Reseta o arquivo etc/usuarios.json para os valores padrão"""
     reset = {"usuarios": [{
         "nome": "Eric",
         "senha": "1234",

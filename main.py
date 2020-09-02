@@ -5,13 +5,14 @@ from scrips.usuario import usuario
 from scrips.mercado import Mercado
 from scrips.pedra_papel_tesoura import PedraPapelTesoura
 from scrips.jogo_da_velha import JogoDaVelha
+from scrips.banco import Banco
 
 
 def menu_principal(log):
     print('\n' + historia_geral())
     print('\nSeja bem vindo(a) ao Menu Principal\n\nO que deseja fazer?')
     user = input('1- Jogo da Forca\n2- Máquina de café (em construção)\n3- Mercado\n4- Instruções\n'
-                 '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n Sair - para sair do programa\n')
+                 '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n')
     while user != 'sair':
         if user == '1':
             Jogo(log)
@@ -25,9 +26,11 @@ def menu_principal(log):
             PedraPapelTesoura(log)
         elif user == '6':
             JogoDaVelha(log)
+        elif user == '7':
+            Banco(log)
         print('\nSeja bem vindo(a) ao Menu Principal\n\nO que deseja fazer?')
         user = input('1- Jogo da Forca\n2- Máquina de café\n3- Mercado\n4- Instruções\n5- Pedra, Papel e Tesoura\n'
-                     '6- Jogo da Velha\n Sair - para sair do programa\n')
+                     '6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n')
 
 
 login = usuario()  # nick e senha
