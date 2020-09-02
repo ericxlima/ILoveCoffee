@@ -12,8 +12,8 @@ class PedraPapelTesoura:
 
     def jogar(self):
         print('\n Bem vindo ao Jogo Pedra Papel e Tesoura\n')
-        print('Instruções: Ao jogar escolha uma entre as opções [pedra, papel, tesoura]')
-        print('Pressione a qualquer momento "sair" para sair ou "pontos" para exibir sua pontuação')
+        print('Instruções:\n    Ao jogar escolha uma entre as opções [pedra, papel, tesoura]')
+        print(' Pressione a qualquer momento "sair" para sair ou "pontos" para exibir sua pontuação\n')
         lista = ["pedra", "papel", "tesoura"]
         perdedor = {"pedra": "papel", "tesoura": "pedra", "papel": "tesoura"}
         user_choice = input('Você escolhe: ').lower().strip()

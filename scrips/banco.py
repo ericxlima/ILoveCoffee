@@ -32,8 +32,8 @@ class Banco:
     def exe(self):
         print('Bem vindo(a) ao Banco, aqui você pode trocar pontos por dinheiro, fazer um cartão de crédito, efetuar '
               'depósitos, entre outras coisas futuras')
-        fzr = input('O que querer fazer?\n1- Comprar dinheiro\nsair - Sair do Banco')
+        fzr = input('O que querer fazer?\n  1- Comprar dinheiro\n   sair - Sair do Banco\n')
         while fzr != 'sair':
             if fzr == '1':
                 self.comprar_money()
-            fzr = input('O que querer fazer?\n1- Comprar dinheiro\nsair - Sair do Banco')
+            fzr = input('O que querer fazer?\n  1- Comprar dinheiro\n   sair - Sair do Banco\n')

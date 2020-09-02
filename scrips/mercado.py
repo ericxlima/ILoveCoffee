@@ -29,7 +29,7 @@ class Mercado:
             except IndexError:
                 print('Não foi possível realizar as compras :(\n')
 
-        precos = '''Preços tabelados:
+        precos = '''\nPreços tabelados:
             1 ml Água  -> 15  pontos
             1 ml Leite -> 25  pontos
             1 g Café   -> 50  pontos
@@ -55,8 +55,8 @@ class Mercado:
 
     def exe(self):
         print('\nBem vindo ao Mercado, aqui você pode trocar pontos por dinheiro e/ou ingredientes')
-        fzr = input('O que deseja fazer? [comprar/sair]')
+        fzr = input('O que deseja fazer? [comprar/sair]\n')
         while fzr != 'sair':
             self.comprar()
-            fzr = input('O que deseja fazer? [comprar/sair]')
+            fzr = input('O que deseja fazer? [comprar/sair]\n')
         self.salvar()

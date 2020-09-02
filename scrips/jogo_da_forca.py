@@ -18,7 +18,6 @@ class Jogo:
                            }
         self.nick = nick
         self.pontuacao = 0
-        print(f'Seja Bem Vindo(a) {self.nick} ao Jogo da Forca')
         self.exe()
 
     def jogar(self, categoria):
@@ -29,7 +28,7 @@ class Jogo:
         list_letters = []
         while lifes > 0:
             print('\n' + ''.join(word_hifens))
-            letter = input('Insira uma letra:')
+            letter = input('Insira uma letra: ')
             # Possíveis enganos
             if letter in list_letters:
                 print('Você já digitou esta letra')
@@ -68,7 +67,8 @@ class Jogo:
             file2.write(geral)
 
     def exe(self):
-        user_choice = input('\nEscolha "jogar" ou "sair":')
+        print(f'Seja Bem Vindo(a) {self.nick} ao Jogo da Forca')
+        user_choice = input('\nEscolha "jogar" ou "sair": ')
         while user_choice != 'sair':
             cat = input('Escolha uma categoria:\n- Animais\n- Alimentos\n- Geral\n').lower()
             if cat in self.categorias.keys():

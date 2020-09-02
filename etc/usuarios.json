@@ -3,13 +3,13 @@
         {
             "nome": "Eric",
             "senha": "1234",
-            "pontos": 1500,
+            "pontos": 0,
             "recursos": {
                 "agua": 1600,
                 "leite": 1300,
                 "cafe": 1100,
                 "copos": 19,
-                "dinheiro": 1700
+                "dinheiro": 0
             }
         }
     ]

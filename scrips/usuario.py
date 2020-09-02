@@ -15,8 +15,8 @@ def usuario():
             else:
                 print('Usuário e/ou senha incorreto')
         else:
-            user_nick = input('Insira um NickName (não poderá ser alterado): ')
-            user_senha = input('Insira sua senha (não pdoerá ser alterada): ')
+            user_nick = input('Insira um NickName (não poderá ser alterado): ').strip()
+            user_senha = input('Insira sua senha (não pdoerá ser alterada): ').strip()
             if check(user_nick):
                 criar_usuario(user_nick, user_senha)
                 nick, senha = user_nick, user_senha
