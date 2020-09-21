@@ -12,7 +12,7 @@ def resetar():
                      "leite": 1300,
                      "cafe": 1100,
                      "copos": 19,
-                     "dinheiro": 0}
+                     "dinheiro": 1000}
     }]}
 
     with open('usuarios.json', 'w+') as file:

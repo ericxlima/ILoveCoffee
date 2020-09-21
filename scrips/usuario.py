@@ -6,7 +6,7 @@ def usuario():
 
     nick, senha = None, None
     while (nick, senha) == (None, None):
-        cadastrado = input('\nVocê já está cadastrado no sistema?[S/N]').upper()
+        cadastrado = input('\nVocê já está cadastrado no sistema?[S/N] ').upper()
         if cadastrado == 'S':
             user_nick = input('Insira seu Nickname: ')
             user_senha = input('Insira sua senha: ')

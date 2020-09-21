@@ -9,8 +9,8 @@
                 "agua": 1600,
                 "leite": 1300,
                 "cafe": 1100,
-                "copos": 19,
-                "dinheiro": 0
+                "copos": 1000,
+                "dinheiro": 1000
             }
         }
     ]
