@@ -14,7 +14,7 @@ class Mercado:
             self.geral = json.load(file)
             for idx, pessoa in enumerate(self.geral['usuarios']):
                 if pessoa['nome'] == self.nick:
-                    self.line, self.user_values = (idx, self.geral['usuarios'][idx]['recursos'])
+                    self.line, self.user_values = (idx, self.geral['usuarios'][idx]['recursos'] + self.geral[idx]['rank'])
                     self.user = self.geral['usuarios'][idx]
 
     def comprar(self):

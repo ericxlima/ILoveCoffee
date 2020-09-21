@@ -1,4 +1,7 @@
-class CoffeeMachine:
+import json
+
+
+class MaquinaDeCafe:
 
     def __init__(self, nick):
         """ Dados relativos a Máquina e ao Score do Usuário """
@@ -6,17 +9,21 @@ class CoffeeMachine:
         self.nick = nick
         print(f'Seja Bem Vindo(a) {self.nick} a Máquina de Café')
         self.dict_values = {}
-        self.iventario_maquina()
-        self.dados = {'ml_bebido': 0, 'money_gasto': 0, 'copos_usados': 0, 'tipos': []}
+        self.load_info()
+        self.geral, self.line, self.user, self.user_rank = None, None, None, None
+        self.user_values = None
+        self.dados = {}
         self.exe()
 
-    def iventario_maquina(self):
-        """ Volta para o estado anterior da máquina (arquivo recursos_maquina.etc)"""
-
-        with open('../etc/recursos_maquina.etc', 'r+') as file:
-            recursos = list(map(int, file.readlines()[0].split(',')))
-        for index, value in enumerate(['água', 'leite', 'café', 'copos', 'money']):
-            self.dict_values[value] = recursos[index]
+    def load_info(self):
+        with open('etc/usuarios.json', 'r') as file:
+            self.geral = json.load(file)
+            for idx, pessoa in enumerate(self.geral['usuarios']):
+                if pessoa['nome'] == self.nick:
+                    self.line = idx
+                    self.user_values = self.geral['usuarios'][idx]['recursos']
+                    self.user_rank = self.geral['usuarios'][idx]['rank']
+                    self.user = self.geral['usuarios'][idx]
 
     def remaining(self):
         """ Mostra os recursos da Máquina de Café """

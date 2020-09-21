@@ -1,37 +1,41 @@
-from etc.instrucoes import menu, historia_geral
-from scrips.maquina_cafe import CoffeeMachine
-from scrips.jogo_da_forca import Jogo
-from scrips.usuario import usuario
+from etc.instrucoes import instrucoes, historia_geral
+from scrips.banco import Banco
+from scrips.jogo_da_forca import JodoDaForca
+from scrips.jogo_da_velha import JogoDaVelha
+from scrips.maquina_cafe import MaquinaDeCafe
 from scrips.mercado import Mercado
 from scrips.pedra_papel_tesoura import PedraPapelTesoura
-from scrips.jogo_da_velha import JogoDaVelha
-from scrips.banco import Banco
+from scrips.usuario import usuario
 
 
-def menu_principal(log):
+def menu_principal():
+    login = usuario()
     print('\n' + historia_geral())
     print('\nSeja bem vindo(a) ao Menu Principal\n\nO que deseja fazer?')
     user = input('1- Jogo da Forca\n2- Máquina de café (em construção)\n3- Mercado\n4- Instruções\n'
                  '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n')
+
     while user != 'sair':
         if user == '1':
-            Jogo(log)
+            JodoDaForca(login)
         elif user == '2':
-            CoffeeMachine(log)
+            MaquinaDeCafe(login)
         elif user == '3':
-            Mercado(log)
+            Mercado(login)
         elif user == '4':
-            menu()
+            instrucoes()
         elif user == '5':
-            PedraPapelTesoura(log)
+            PedraPapelTesoura(login)
         elif user == '6':
-            JogoDaVelha(log)
+            JogoDaVelha(login)
         elif user == '7':
-            Banco(log)
+            Banco(login)
         print('\nSeja bem vindo(a) ao Menu Principal\n\nO que deseja fazer?')
-        user = input('1- Jogo da Forca\n2- Máquina de café\n3- Mercado\n4- Instruções\n5- Pedra, Papel e Tesoura\n'
-                     '6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n')
+        user = input('1- Jogo da Forca\n2- Máquina de café (em construção)\n3- Mercado\n4- Instruções\n'
+                     '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n')
 
 
-login = usuario()  # nick e senha
-menu_principal(login)
+if __name__ == '__main__':
+    menu_principal()
+else:
+    raise Exception('Este arquivo não deve ser importado, apenas executado')

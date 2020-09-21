@@ -29,6 +29,7 @@ def criar_usuario(nome, senha):
     novo_usuario = {'nome': nome,
                     'senha': senha,
                     'pontos': 0,
+                    "rank": 0,
                     'recursos': {'agua': 600,
                                  'leite': 300,
                                  'cafe': 100,

@@ -7,6 +7,7 @@ def resetar():
         "nome": "Eric",
         "senha": "1234",
         "pontos": 0,
+        "rank": 0,
         "recursos": {"agua": 1600,
                      "leite": 1300,
                      "cafe": 1100,

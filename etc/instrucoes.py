@@ -50,7 +50,7 @@ até com que um saia vencedor ou dê velha. As pontuações serão definidas dep
     return texto
 
 
-def menu():
+def instrucoes():
     escolha = input('\nBem vindo(a) ao Menu de Instruções, escolha uma das opções para saber mais:'
                     '\n1- História Geral\n2- Jogo da Forca\n3- Mercado\n4- Máquina de café\n5- Pedra Papel Tesoura'
                     '6- Banco\n7- Jogo da Velha\nSair -> para sair deste menu')

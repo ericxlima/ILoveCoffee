@@ -2,7 +2,7 @@ from random import choice
 import json
 
 
-class Jogo:
+class JodoDaForca:
 
     def __init__(self, nick):
 
