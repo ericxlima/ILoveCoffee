@@ -8,6 +8,7 @@ from scrips.maquina_cafe import MaquinaDeCafe
 from scrips.mercado import Mercado
 from scrips.pedra_papel_tesoura import PedraPapelTesoura
 from scrips.usuario import usuario
+#from etc.ranking import Rank
 
 
 def limpar():
@@ -24,8 +25,8 @@ def menu_principal():
     print(Descricoes.logo)
     print('\n' + Descricoes.historia_geral_desc)
     print('\nSeja bem vindo(a) ao Menu Principal\n\nO que deseja fazer?')
-    user = input('1- Jogo da Forca\n2- Máquina de café\n3- Mercado\n4- Instruções\n'
-                 '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n>>> ').strip()
+    user = input('1- Jogo da Forca\n2- Máquina de café\n3- Mercado\n4- Instruções\n5- Pedra, Papel e Tesoura\n'
+                 '6- Jogo da Velha\n7- Banco\n8- Ranking\nSair - para sair do programa\n>>> ').strip()
 
     while user != 'sair':
         limpar()
@@ -43,12 +44,14 @@ def menu_principal():
             JogoDaVelha(login)
         elif user == '7':
             Banco(login)
+        #elif user == '8':
+            #Rank()
         limpar()
         print(Descricoes.logo)
         print('\n' + Descricoes.historia_geral_desc)
         print('\nSeja bem vindo(a) ao Menu Principal\n\nO que deseja fazer?')
-        user = input('1- Jogo da Forca\n2- Máquina de café\n3- Mercado\n4- Instruções\n'
-                     '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n>>> ').strip()
+        user = input('1- Jogo da Forca\n2- Máquina de café\n3- Mercado\n4- Instruções\n5- Pedra, Papel e Tesoura\n'
+                     '6- Jogo da Velha\n7- Banco\n8- Ranking\nSair - para sair do programa\n>>> ').strip()
 
 
 if __name__ == '__main__':

@@ -3,27 +3,66 @@
         {
             "nome": "Eric",
             "senha": "1234",
-            "pontos": 1500,
-            "rank": 0,
+            "pontos": 0,
+            "rank": 8,
             "recursos": {
-                "agua": 1600,
-                "leite": 1300,
-                "cafe": 1100,
-                "copos": 19,
-                "dinheiro": 1000
+                "agua": 1150,
+                "leite": 1200,
+                "cafe": 1072,
+                "copos": 17,
+                "dinheiro": 990
             }
         },
         {
-            "nome": "1234",
-            "senha": "1234",
-            "pontos": 995,
-            "rank": 0,
+            "nome": "sahsuahu",
+            "senha": "12133",
+            "pontos": 0,
+            "rank": 10,
             "recursos": {
-                "agua": 602,
-                "leite": 301,
-                "cafe": 101,
+                "agua": 600,
+                "leite": 300,
+                "cafe": 100,
                 "copos": 9,
-                "dinheiro": 176
+                "dinheiro": 0
+            }
+        },
+        {
+            "nome": "asuahsuah",
+            "senha": "ahsauhdune",
+            "pontos": 0,
+            "rank": 20,
+            "recursos": {
+                "agua": 600,
+                "leite": 300,
+                "cafe": 100,
+                "copos": 9,
+                "dinheiro": 0
+            }
+        },
+        {
+            "nome": "itjgit",
+            "senha": "eriuboieno",
+            "pontos": 0,
+            "rank": 1,
+            "recursos": {
+                "agua": 600,
+                "leite": 300,
+                "cafe": 100,
+                "copos": 9,
+                "dinheiro": 0
+            }
+        },
+        {
+            "nome": "totkgotg",
+            "senha": "qieyufbiubcwo",
+            "pontos": 0,
+            "rank": 4,
+            "recursos": {
+                "agua": 600,
+                "leite": 300,
+                "cafe": 100,
+                "copos": 9,
+                "dinheiro": 0
             }
         }
     ]

@@ -8,9 +8,9 @@ class MaquinaDeCafe:
 
         self.nick = nick
         print(f'Seja Bem Vindo(a) {self.nick} a Máquina de Café')
+        self.geral, self.line, self.user, self.user_rank = None, None, None, 0
         self.user_values = None
         self.load_info()
-        self.geral, self.line, self.user, self.user_rank = None, None, None, 0
         self.exe()
 
     def load_info(self):
@@ -81,7 +81,5 @@ class MaquinaDeCafe:
                 self.user_buy()
             elif user == '2':
                 self.remaining()
-            elif user == 'sair':
-                #  falta salvar os recursos da máquina, o inventário, e o score do usuário
-                self.salvar()
+            self.salvar()
             user = input('\nEscolha uma ação: \n1- Comprar\n2- Recursos\nSair - Para sair da Máquina\n>>> ').strip().lower()
