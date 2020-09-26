@@ -18,22 +18,26 @@ class Banco:
 
     def comprar_money(self):
         pontos, dinheiro = self.values
-        print(f'Você tem {pontos} pontos e pode comprar até {int(pontos / 5)} de dinheiro')
-        buy = int(input('Quanto de dinheiro você quer comprar?'))
-        if buy <= pontos / 5:
-            pontos -= buy * 5
-            dinheiro += buy
-            self.user[1]['pontos'], self.user[1]['recursos']['dinheiro'] = (pontos, dinheiro)
-        with open('etc/usuarios.json', 'w') as file:
-            self.geral['usuarios'][self.user[0]] = self.user[1]
-            geral = json.dumps(self.geral, indent=4)
-            file.write(geral)
+        print(f'\nVocê tem {pontos} pontos e pode comprar até {int(pontos / 5)} de dinheiro')
+        buy = input('Quanto de dinheiro você quer comprar? ')
+        try:
+            buy = int(buy)
+            if buy <= pontos / 5:
+                pontos -= buy * 5
+                dinheiro += buy
+                self.user[1]['pontos'], self.user[1]['recursos']['dinheiro'] = (pontos, dinheiro)
+                with open('etc/usuarios.json', 'w') as file:
+                    self.geral['usuarios'][self.user[0]] = self.user[1]
+                    geral = json.dumps(self.geral, indent=4)
+                    file.write(geral)
+            else:
+                print(f'Você só pode comprar até {pontos / 5} de dinheiro')
+        except ValueError:
+            print('O valor tem de ser numeral')
 
     def exe(self):
-        print('Bem vindo(a) ao Banco, aqui você pode trocar pontos por dinheiro, fazer um cartão de crédito, efetuar '
+        print('Bem vindo(a) ao Banco, aqui você pode trocar pontos por dinheiro, fazer um cartão de crédito, \nefetuar '
               'depósitos, entre outras coisas futuras')
         fzr = input('O que querer fazer?\n  1- Comprar dinheiro\n   sair - Sair do Banco\n')
-        while fzr != 'sair':
-            if fzr == '1':
-                self.comprar_money()
-            fzr = input('O que querer fazer?\n  1- Comprar dinheiro\n   sair - Sair do Banco\n')
+        if fzr == '1':
+            self.comprar_money()

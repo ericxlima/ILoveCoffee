@@ -1,3 +1,6 @@
+from time import sleep
+
+
 class JogoDaVelha:
 
     def __init__(self, nick):
@@ -6,6 +9,7 @@ class JogoDaVelha:
 
         self.matriz = [[' ' for _ in range(3)] for _ in range(3)]
         self.jogar()
+        sleep(2)
 
     def print_matriz(self):
         print('  1  2  3 ')
@@ -57,6 +61,7 @@ class JogoDaVelha:
             user_coordenada = input('Insira as coordenadas [linha coluna]: ').replace(' ', '')
 
     def jogar(self):
+        print('Fase apenas de experimentação')
         while not self.ganhador() or self.tentativas >= 9:
             self.print_matriz()
             self.coordenadas()

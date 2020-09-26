@@ -55,8 +55,8 @@ class Mercado:
 
     def exe(self):
         print('\nBem vindo ao Mercado, aqui você pode trocar pontos por dinheiro e/ou ingredientes')
-        fzr = input('O que deseja fazer? [comprar/sair]\n')
+        fzr = None
         while fzr != 'sair':
             self.comprar()
-            fzr = input('O que deseja fazer? [comprar/sair]\n')
+            fzr = input('O que deseja fazer? [comprar/sair]\n>>> ')
         self.salvar()

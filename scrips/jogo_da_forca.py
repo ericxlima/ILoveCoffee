@@ -70,7 +70,7 @@ class JodoDaForca:
         print(f'Seja Bem Vindo(a) {self.nick} ao Jogo da Forca')
         user_choice = input('\nEscolha "jogar" ou "sair": ')
         while user_choice != 'sair':
-            cat = input('Escolha uma categoria:\n- Animais\n- Alimentos\n- Geral\n').lower()
+            cat = input('Escolha uma categoria:\n- Animais\n- Alimentos\n- Geral\n>>> ').lower()
             if cat in self.categorias.keys():
                 self.jogar(cat)
             else:

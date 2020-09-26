@@ -81,4 +81,4 @@ class MaquinaDeCafe:
             elif user == 'sair':
                 #  falta salvar os recursos da máquina, o inventário, e o score do usuário
                 self.salvar()
-            user = input('\nEscolha uma ação: \n1- Comprar\n2- Recursos\nSair - Para sair da Máquina\n').strip().lower()
+            user = input('\nEscolha uma ação: \n1- Comprar\n2- Recursos\nSair - Para sair da Máquina\n>>> ').strip().lower()

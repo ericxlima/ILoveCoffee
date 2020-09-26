@@ -1,6 +1,6 @@
 from os import system, name
 
-from etc.instrucoes import instrucoes, historia_geral
+from etc.instrucoes import Descricoes
 from scrips.banco import Banco
 from scrips.jogo_da_forca import JodoDaForca
 from scrips.jogo_da_velha import JogoDaVelha
@@ -18,11 +18,14 @@ def limpar():
 
 
 def menu_principal():
+    limpar()
     login = usuario()
-    print('\n' + historia_geral())
+    limpar()
+    print(Descricoes.logo)
+    print('\n' + Descricoes.historia_geral_desc)
     print('\nSeja bem vindo(a) ao Menu Principal\n\nO que deseja fazer?')
     user = input('1- Jogo da Forca\n2- Máquina de café\n3- Mercado\n4- Instruções\n'
-                 '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n')
+                 '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n>>> ')
 
     while user != 'sair':
         limpar()
@@ -33,16 +36,19 @@ def menu_principal():
         elif user == '3':
             Mercado(login)
         elif user == '4':
-            instrucoes()
+            Descricoes().instrucoes()
         elif user == '5':
             PedraPapelTesoura(login)
         elif user == '6':
             JogoDaVelha(login)
         elif user == '7':
             Banco(login)
+        limpar()
+        print(Descricoes.logo)
+        print('\n' + Descricoes.historia_geral_desc)
         print('\nSeja bem vindo(a) ao Menu Principal\n\nO que deseja fazer?')
-        user = input('1- Jogo da Forca\n2- Máquina de café (em construção)\n3- Mercado\n4- Instruções\n'
-                     '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n')
+        user = input('1- Jogo da Forca\n2- Máquina de café\n3- Mercado\n4- Instruções\n'
+                     '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n>>> ')
 
 
 if __name__ == '__main__':

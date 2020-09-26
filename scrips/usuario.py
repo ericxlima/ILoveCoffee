@@ -14,7 +14,7 @@ def usuario():
                 nick, senha = user_nick, user_senha
             else:
                 print('Usuário e/ou senha incorreto')
-        else:
+        elif cadastrado == 'N':
             user_nick = input('Insira um NickName (não poderá ser alterado): ').strip()
             user_senha = input('Insira sua senha (não pdoerá ser alterada): ').strip()
             if check(user_nick):
@@ -22,6 +22,8 @@ def usuario():
                 nick, senha = user_nick, user_senha
             else:
                 print('Nickname já cadastrado, escolha outro')
+        else:
+            print('Insira "S" caso esteja cadastrado ou "N" caso não esteja cadastrado e queira se cadastrar')
     return nick
 
 
