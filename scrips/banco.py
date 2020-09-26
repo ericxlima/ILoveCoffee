@@ -1,3 +1,4 @@
+from time import sleep
 import json
 
 
@@ -8,6 +9,7 @@ class Banco:
         self.geral, self.user, self.values = None, None, None
         self.load_values()
         self.exe()
+        sleep(2)
 
     def load_values(self):
         with open('etc/usuarios.json', 'r') as file:
@@ -30,6 +32,7 @@ class Banco:
                     self.geral['usuarios'][self.user[0]] = self.user[1]
                     geral = json.dumps(self.geral, indent=4)
                     file.write(geral)
+                print('Compra realizada com sucesso')
             else:
                 print(f'Você só pode comprar até {pontos / 5} de dinheiro')
         except ValueError:

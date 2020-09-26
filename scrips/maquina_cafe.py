@@ -57,6 +57,9 @@ class MaquinaDeCafe:
     def user_buy(self):
         user = input(
             '\nO que você quer comprar? \n1- Café espresso\n2- Café com leite\n3- Cappuccino\n')
+        while user not in '123':
+            print('O café tem de ser um dos 3:\n1- Café espresso\n2- Café com leite\n3- Cappuccino\n')
+            user = input('\nO que você quer comprar? \n1- Café espresso\n2- Café com leite\n3- Cappuccino\n')
         try:
             self.buy_coffee(int(user))
         except ValueError:

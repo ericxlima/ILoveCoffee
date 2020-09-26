@@ -25,7 +25,7 @@ def menu_principal():
     print('\n' + Descricoes.historia_geral_desc)
     print('\nSeja bem vindo(a) ao Menu Principal\n\nO que deseja fazer?')
     user = input('1- Jogo da Forca\n2- Máquina de café\n3- Mercado\n4- Instruções\n'
-                 '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n>>> ')
+                 '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n>>> ').strip()
 
     while user != 'sair':
         limpar()
@@ -48,7 +48,7 @@ def menu_principal():
         print('\n' + Descricoes.historia_geral_desc)
         print('\nSeja bem vindo(a) ao Menu Principal\n\nO que deseja fazer?')
         user = input('1- Jogo da Forca\n2- Máquina de café\n3- Mercado\n4- Instruções\n'
-                     '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n>>> ')
+                     '5- Pedra, Papel e Tesoura\n6- Jogo da Velha\n7- Banco\nSair - para sair do programa\n>>> ').strip()
 
 
 if __name__ == '__main__':
