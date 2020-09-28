@@ -64,6 +64,19 @@
                 "copos": 9,
                 "dinheiro": 0
             }
+        },
+        {
+            "nome": "1234",
+            "senha": "1234",
+            "pontos": 0,
+            "rank": 0,
+            "recursos": {
+                "agua": 600,
+                "leite": 300,
+                "cafe": 100,
+                "copos": 9,
+                "dinheiro": 0
+            }
         }
     ]
 }

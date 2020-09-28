@@ -9,13 +9,13 @@ class Rank:
         self.exe()
 
     def load_users(self):
-        with open('usuarios.json', 'r+') as file:
+        with open('etc/usuarios.json', 'r+') as file:
             geral = json.load(file)
         self.geral = geral
 
     def classificacao(self):
         sorted_dic = {}
-        for lista in self.geral['usuarios']:
+        for lista in self.geral["usuarios"]:
             sorted_dic[lista['nome']] = lista['rank']
         sorted_dic = sorted(sorted_dic.items(), key=lambda item: item[1], reverse=True)
         self.geral = sorted_dic
@@ -29,5 +29,4 @@ class Rank:
         self.load_users()
         self.classificacao()
         self.print_ranking()
-
-Rank()
+        input('\nPressione qualquer tecla para continuar: ')

@@ -8,7 +8,7 @@ from scrips.maquina_cafe import MaquinaDeCafe
 from scrips.mercado import Mercado
 from scrips.pedra_papel_tesoura import PedraPapelTesoura
 from scrips.usuario import usuario
-#from etc.ranking import Rank
+from etc.ranking import Rank
 
 
 def limpar():
@@ -31,21 +31,29 @@ def menu_principal():
     while user != 'sair':
         limpar()
         if user == '1':
+            print(Descricoes.jogo_da_forca_logo)
             JodoDaForca(login)
         elif user == '2':
+            print(Descricoes.maquina_cafe_logo)
             MaquinaDeCafe(login)
         elif user == '3':
+            print(Descricoes.mercado_logo)
             Mercado(login)
         elif user == '4':
+            print(Descricoes.instrucoes_logo)
             Descricoes().instrucoes()
         elif user == '5':
+            print(Descricoes.pedra_papel_tesoura_logo)
             PedraPapelTesoura(login)
         elif user == '6':
+            print(Descricoes.jogo_da_velha_desc)
             JogoDaVelha(login)
         elif user == '7':
+            print(Descricoes.banco_logo)
             Banco(login)
-        #elif user == '8':
-            #Rank()
+        elif user == '8':
+            print(Descricoes.ranking_logo)
+            Rank()
         limpar()
         print(Descricoes.logo)
         print('\n' + Descricoes.historia_geral_desc)
