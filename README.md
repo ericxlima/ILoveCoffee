@@ -11,15 +11,15 @@
 </h3>
 
 <!--ts-->
-   * [Sobre](#📖Sobre)
-   * [Instalação](#✏️Instalação)
-   * [Conteúdo](#📂Conteúdo)
-      * [Usuários](#👥Usuários)
-      * [Minigames](#🎮Minigames)
-   * [Requisitos](#🛠Requisitos)
-   * [Tecnologias](#🚀Tecnologias)
-   * [Colabore](#🌎Colabore)
-   * [Autor](#😊Autor)
+   * [Sobre](#Sobre)
+   * [Instalação](#Instalação)
+   * [Conteúdo](#Conteúdo)
+      * [Usuários](#Usuários)
+      * [Minigames](#Minigames)
+   * [Requisitos](#Requisitos)
+   * [Tecnologias](#Tecnologias)
+   * [Colabore](#Colabore)
+   * [Autor](#Autor)
 <!--te-->
 
 <h1>📖Sobre</h1>
@@ -65,7 +65,7 @@ Dentre os mini-games, podemos citar:
 - [x] Jogo da forca
 
 <h2 align="center"> 
-	🚧  ILoveCoffee Status  🚀 Estável v1.0.0  🚧
+	🎈  ILoveCoffee v1.0.0 Status: Estável 🎈
 </h2>
 
 <h3>🛠Requisitos</h3>
@@ -84,10 +84,9 @@ Caso queira contribuir com o projeto, tenha notado algum bug que queira reportar
 
 <h3>Autor</h3>
  <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/58092119?s=460&u=5b62affe756c63fb0458026088d779d88159655d&v=4" width="100px;" alt=""/>
- <br /><sub href=“https://github.com/ericxlima/“><b>Eric de Lima</b></sub>
+ [Eric de Lima](https://github.com/ericxlima)
  
 👋🏽 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-ericdelima-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ericdelima/)](https://www.linkedin.com/in/ericdelima/) 
 [![Gmail Badge](https://img.shields.io/badge/-eric.vinlima@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:eric.vinlima@gmail.com)](mailto:eric.vinlima@gmail.com)
-

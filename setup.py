@@ -15,7 +15,7 @@ setup(
     url='https://github.com/ericxlima/ILoveCoffee',
     project_urls={
         'Código fonte': 'https://github.com/ericxlima/ILoveCoffee',
-        'Download': 'https://github.com/ericxlima/ILoveCoffee/archives/1.0.0.zip'
+        'Download': 'https://github.com/ericxlima/ILoveCoffee/archives'
     },
     license='MIT',
     keywords='ILoveCoffee EricdeLima EuAmoCafé Coffee Café Game Jogo',
