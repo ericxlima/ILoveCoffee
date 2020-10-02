@@ -180,7 +180,7 @@ XX    XXXXX    XX    X    X   X    X   X   X X   X X       X     X   X X   X  XX
                             '\n1- História Geral\n2- Jogo da Forca\n3- Mercado\n4- Máquina de café\n5- Pedra Papel Tesoura'
                             '6- Banco\n7- Jogo da Velha\n8- Ranking Rei do Café\nSair -> para sair deste menu\n')
         while escolha.lower() != 'sair':
-            print('*' * 125)
+            print('\n' + '*' * 125)
             if escolha == '1':
                 ler_texto(self.historia_geral_desc)
             elif escolha == '2':

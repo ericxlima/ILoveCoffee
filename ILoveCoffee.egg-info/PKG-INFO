@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: ILoveCoffee
+Version: 1.0.0
+Summary: Um simples conjunto de mini-jogos, e mini-projetos
+Home-page: https://github.com/ericxlima/ILoveCoffee
+Author: Eric de Lima
+Author-email: eric.vinlima@gmail.com
+License: MIT
+Project-URL: Código fonte, https://github.com/ericxlima/ILoveCoffee
+Project-URL: Download, https://github.com/ericxlima/ILoveCoffee/archives/1.0.0.zip
+Description: Nele podemos jogar alguns clássicos como Jogo da Velha, Pedra Papel Tesoura, Jogo da Forca entre outros jogos. Também temos um Sistema de Ranking integrado, e o objetivo principal é ganhar pontos jogando os jogos, para comprar ingredientes e dinheiro para fazer cafés.
+Keywords: ILoveCoffee EricdeLima EuAmoCafé Coffee Café Game Jogo
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Terminals

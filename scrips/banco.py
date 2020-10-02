@@ -9,7 +9,7 @@ class Banco:
         self.geral, self.user, self.values = None, None, None
         self.load_values()
         self.exe()
-        sleep(2)
+        sleep(20)
 
     def load_values(self):
         with open('etc/usuarios.json', 'r') as file:

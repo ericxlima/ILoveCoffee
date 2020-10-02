@@ -38,7 +38,7 @@ class JogoDaVelha:
 
             while not other_player_exist(other_nick, other_senha):
                 print('\nO usuário inserido não existe (Senha ou Nick inválido)\n')
-                continuar = input('Insira "sair" para sair ou "continuar" para inserir outro usuário? ')
+                continuar = input('Insira "sair" para sair ou "continuar" para inserir outro usuário? ').lower()
                 if continuar == 'sair':
                     raise TypeError('')
                 else:
@@ -108,7 +108,7 @@ class JogoDaVelha:
             user_coordenada = input('Insira as coordenadas [linha coluna]: ').replace(' ', '')
 
     def jogar(self):
-        print(f'O jogador {self.other_nick} começa com X\n'
+        print(f'\nO jogador {self.other_nick} começa com X\n'
               f'O jogador {self.nick} é o O')
         while not self.ganhador() or self.tentativas >= 9:
             self.print_matriz()

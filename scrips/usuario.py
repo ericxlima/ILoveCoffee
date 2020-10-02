@@ -24,6 +24,7 @@ def usuario():
                 print('Nickname já cadastrado, escolha outro')
         else:
             print('Insira "S" caso esteja cadastrado ou "N" caso não esteja cadastrado e queira se cadastrar')
+    input('\nÓtimo\nInsira qualquer tecla para continuar\n>>> ')
     return nick
 
 

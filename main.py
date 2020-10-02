@@ -46,7 +46,7 @@ def menu_principal():
             print(Descricoes.pedra_papel_tesoura_logo)
             PedraPapelTesoura(login)
         elif user == '6':
-            print(Descricoes.jogo_da_velha_desc)
+            print(Descricoes.jogo_da_velha_logo)
             JogoDaVelha(login)
         elif user == '7':
             print(Descricoes.banco_logo)
