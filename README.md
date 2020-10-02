@@ -84,6 +84,7 @@ Caso queira contribuir com o projeto, tenha notado algum bug que queira reportar
 
 <h3>Autor</h3>
  <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/58092119?s=460&u=5b62affe756c63fb0458026088d779d88159655d&v=4" width="100px;" alt=""/>
+ 
  [Eric de Lima](https://github.com/ericxlima)
  
 👋🏽 Entre em contato!
